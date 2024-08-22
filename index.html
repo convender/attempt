@@ -4,67 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>web</title>
+    <title>Web Form</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 
 <body>
-    <div class="information">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name">
-        <label for="timestart">Start Time</label>
-        <input type="time" id="timestart">
-        <label for="timefinish">Finish time</label>
-        <input type="time" id="timefinish">
+    <form action="https://formspree.io/f/xanwpdjk" method="POST">
+        <div class="information">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
+            <label for="timestart">Start Time:</label>
+            <input type="time" id="timestart" name="timestart" required>
 
-        <div class="selection-container">
-            <!-- Product selection -->
-            <div>
-                <label for="product">Choose an item:</label>
-                <select id="product">
-                    <option value="bag">Bag</option>
-                    <option value="box">Box</option>
-                    <option value="container">Container</option>
-                    <option value="sack">Sack</option>
-                </select>
+            <label for="timefinish">Finish Time:</label>
+            <input type="time" id="timefinish" name="timefinish" required>
+
+            <div class="selection-container">
+                <!-- Product selection -->
+                <div>
+                    <label for="product">Choose an item:</label>
+                    <select id="product" name="product" required>
+                        <option value="bag">Bag</option>
+                        <option value="box">Box</option>
+                        <option value="container">Container</option>
+                        <option value="sack">Sack</option>
+                    </select>
+                </div>
+
+                <!-- Weight input -->
+                <div>
+                    <label for="weight">Weight:</label>
+                    <input type="number" id="weight" name="weight" min="0" placeholder="Enter weight" required>
+                </div>
+
+                <!-- Unit selection -->
+                <div>
+                    <label for="unit">Unit:</label>
+                    <select id="unit" name="unit" required>
+                        <option value="lbs">lbs</option>
+                        <option value="oz">ounces</option>
+                        <option value="kg">kg</option>
+                        <option value="g">grams</option>
+                    </select>
+                </div>
             </div>
 
-            <!-- Weight input -->
-            <div>
-                <label for="weight">Weight:</label>
-                <input type="number" id="weight" min="0" placeholder="Enter weight">
+            <div id="MessageBox">
+                <label for="message">Enter a message:</label>
+                <input type="text" id="message" name="message" placeholder="Your message here">
             </div>
 
-            <!-- Unit selection -->
-            <div>
-                <label for="unit">Unit:</label>
-                <select id="unit">
-                    <option value="lbs">lbs</option>
-                    <option value="oz">ounces</option>
-                    <option value="kg">kg</option>
-                    <option value="g">grams</option>
-                </select>
-            </div>
-        </div>
-
-        <div id="MessageBox">
-            <label for="message">Enter a message</label>
-            <input type="text" id="message" name="message">
-        </div>
-
-        <form action="https://formspree.io/f/xanwpdjk" method="POST">
+            <!-- Submit Button -->
             <div class="submit-container">
                 <button type="submit">Submit</button>
             </div>
-        </form>
-
-    </div>
-
-
-
-
-
+        </div>
+        
+    </form>
 </body>
 
 </html>
