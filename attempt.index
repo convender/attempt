@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+    <div class="information">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+        <label for="timestart">Start Time</label>
+        <input type="time" id="timestart">
+        <label for="timefinish">Finish time</label>
+        <input type="time" id="timefinish">
+
+
+        <div class="selection-container">
+            <!-- Product selection -->
+            <div>
+                <label for="product">Choose an item:</label>
+                <select id="product">
+                    <option value="bag">Bag</option>
+                    <option value="box">Box</option>
+                    <option value="container">Container</option>
+                    <option value="sack">Sack</option>
+                </select>
+            </div>
+
+            <!-- Weight input -->
+            <div>
+                <label for="weight">Weight:</label>
+                <input type="number" id="weight" min="0" placeholder="Enter weight">
+            </div>
+
+            <!-- Unit selection -->
+            <div>
+                <label for="unit">Unit:</label>
+                <select id="unit">
+                    <option value="lbs">lbs</option>
+                    <option value="oz">ounces</option>
+                    <option value="kg">kg</option>
+                    <option value="g">grams</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="MessageBox">
+            <label for="message">Enter a message</label>
+            <input type="text" id="message" name="message">
+        </div>
+
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
